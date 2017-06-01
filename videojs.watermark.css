@@ -1,5 +1,9 @@
 .vjs-watermark {
     position: absolute;
     display: inline;
-    z-index: 2000;
+    z-index: 20;
+}
+
+.vjs-big-play-button, .vjs-control {
+  z-index: 21;
 }

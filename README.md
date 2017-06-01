@@ -1,4 +1,4 @@
-Video.js Watermark
+Video.js Watermark - Fork of [xbgmsharp/videojs-watermark](https://github.com/xbgmsharp/videojs-watermark)
 =======================
 A plugin display a watermak on top of the video with [Video.js](https://github.com/videojs/video.js/).
 
@@ -13,7 +13,7 @@ You probably want to include the default stylesheet, too. It handles showing the
     <link href="videojs.watermark.css" rel="stylesheet">
 
 Once you have your video element created, you can activate the watermark plugin.
-The plugin take 5 options ``file`` and ``xpos`` and `ypos`` and ``xrepeat`` and ``opacity``.
+The plugin take the options ``file`` and ``xpos`` and `ypos`` and ``xrepeat`` and ``opacity`` and  ``height`` and  ``width``.
 It use the CSS show the image over the video.
 
     video.watermark({
@@ -22,6 +22,8 @@ It use the CSS show the image over the video.
         ypos: 50,
         xrepeat: 0,
         opacity: 0.5,
+        height: '100px',
+        width: '50px'
     });
 
 or
@@ -58,9 +60,7 @@ A few more options has been add to do cool stuff. Here are all the defaults sett
     }
 ```
 
-Known Issues
-------------
-It won't work when using the flash fallback.
+
 
 Licence
 -------
@@ -73,4 +73,3 @@ ANY WARRANTY; without even the  implied warranty of MERCHANTABILITY or FITNESS
 FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 See <http://www.gnu.org/licenses/gpl.html>.
-

@@ -1,18 +1,20 @@
-console.log('watermark: Start');
+
 
 (function() {
-  console.log('watermark: Init defaults');
   var defaults = {
         file: 'Owned_Stamp.png',
         xpos: 0,
         ypos: 0,
         xrepeat: 0,
+        width: 0,
+        height: 0,
         opacity: 100,
         clickable: false,
+        zIndex: 1,
         url: "",
         className: 'vjs-watermark',
-	text: false,
-	debug: false
+	      text: false,
+	      debug: false
     },
     extend = function() {
       var args, target, i, object, property;
@@ -68,6 +70,14 @@ console.log('watermark: Start');
         img = document.createElement('img');
         div.appendChild(img);
         img.src = options.file;
+        if(typeof(options.width) !== 'undefined' && options.width !== 0){ // keep "normal" width
+            if(options.debug) console.log(options.width);
+            img.style.width = options.width;
+        }
+        if(typeof(options.height) !== 'undefined' && options.height !== 0){ // keep "normal" width
+            if(options.debug) console.log(options.height);
+            img.style.height = options.height;
+        }
     }
 
     //img.style.bottom = "0";
@@ -101,6 +111,7 @@ console.log('watermark: Start');
       div.style.left = (this.width()/2)+"px";
     }
     div.style.opacity = options.opacity;
+
 
     //div.style.backgroundImage = "url("+options.file+")";
     //div.style.backgroundPosition.x = options.xpos+"%";
